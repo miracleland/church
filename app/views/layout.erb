@@ -9,9 +9,35 @@
     <link rel = "stylesheet" type = "text/css" href = "stylesheets/bootstrap.min.css">
   </head>
   <body>
-    <div class = "partial">
-      <%= yield %>
-    </div>
+    <nav class = "navbar">
+      <div class = "navbar-header">
+        <a class = "navbar-brand" href = "#">ML</a>
+      </div>
+      <% if signed_in? %>
+        <p class = "navbar-text"><%= current_user.username %></p>
+        <ul class="nav navbar-nav">
+          <li><a href="/sign_out">sign out</a></li>
+        </ul>
+      <% end %>
+    </nav>
+
+    <% if signed_in? %>
+      <div class = "full">
+        <%= yield %>
+      </div>
+    <% else %>
+      <div class = "full">
+        <div class = "center jumbotron middle">
+          <h1>Hello!</h1>
+          <p>Use <a href = "http://github.com">Github</a> to sign in.</p>
+          <p>
+            <a class = "btn btn-primary btn-lg" href = "/auth/github" role = "button">
+              sign in
+            </a>
+          </p>
+        </div>
+      </div>
+    <% end %>
 
     <script type = "text/javascript" src = "javascripts/jquery.min.js"></script>
     <script type = "text/javascript" src = "javascripts/bootstrap.min.js"></script>
