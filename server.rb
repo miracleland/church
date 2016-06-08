@@ -13,6 +13,10 @@ Dir['config/**/*.rb'].each { |file| require_relative file }
 
 # sinatra method that allows methods to be used within templates
 helpers do
+  def current_path_info(request)
+    @path_info = request.path_info
+  end
+
   def current_user
     user_id = session[:user_id]
 
