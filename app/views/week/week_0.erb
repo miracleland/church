@@ -1,0 +1,95 @@
+<h1 class = "page-header">Setup</h1>
+<p>Before we do any coding we need to setup our environment. This section will help you get you configure all the tools you need to get through this course. Be sure to follow these steps sequentially. If you get stuck please let me know.</p>
+
+<h4 class = "page-header">Learning Goals</h2>
+<p>Configure development environment</p>
+
+<h4 class = "page-header">Update OS</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li>Determine your OS version.</li>
+  <li>If do not have OS X 10.11 El Capitan, go to the Apple Store and update your OS X version to that version.</li>
+  <li>Note: you will need an apple id to download the latest OS version.</li>
+</ol>
+<p><strong>Reason</strong></p>
+<p>Many of the tools we will utilize require the latest OS version.</p>
+
+<h4 class = "page-header">Install Chrome</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li><a href = "https://www.google.com/intl/en/chrome/browser/desktop/index.html">Download</a></li>
+</ol>
+<p><strong>Reason</strong></p>
+<p>This will be our primary development browser. Chrome's developer tools are tremendously powerful and helpful for web development. Which we will use extensively once we begin our course on JavaScript.</p>
+
+<h4 class = "page-header">Install Sublime</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li><a href = "https://www.sublimetext.com/3">Download</a></li>
+  <li>Be sure to download the version for OS X</li>
+</ol>
+<p><strong>Reason</strong></p>
+<p>This is the tool we will be using to write our code.</p>
+
+<h4 class = "page-header">Install Apple Xcode Command Line Tools</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li>Install the command line tools by entering the following command into your terminal</li>
+  <pre>xcode-select --install</pre>
+  <li>Restart your computer</li>
+  <li>Veryify that the installation was successful</li>
+  <pre>xcode-select -p</pre>
+  <li>Typing the above should return the following</li>
+  <pre>/Library/Developer/CommandLineTools</pre>
+</ol>
+<p><strong>Reason</strong></p>
+<p>Installation of many common Unix-based tools requires a GCC compiler. The Xcode Command Line Tools include a GCC compiler.</p>
+
+<h4 class = "page-header">Install Homebrew</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li>To install run this command in terminal</li>
+  <pre>ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)"</pre>
+  <li>Verify installation was successful</li>
+  <pre>brew doctor</pre>
+  <li>You should see</li>
+  <pre>Your system is ready to brew</pre>
+</ol>
+<p><strong>Reason</strong></p>
+<p>Homebrew is a package management system that simplifies the installation of software.</p>
+
+<h4 class = "page-header">Install iTerm2</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li><a href = "http://iterm2.com/downloads.html">Download</a></li>
+</ol>
+<p><strong>Reason</strong></p>
+<p>This will be our default terminal. It has some awesome features that the standard terminal does not.</p>
+
+<h4 class = "page-header">Set Sublime as default editor</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li>Be sure that sublime is in your Applications folder</li>
+  <li>Open bash profile</li>
+  <pre>open ~/.bash_profile</pre>
+  <li>Place alias within bash profile</li>
+  <pre>alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"</pre>
+  <li>Reload bash profile to save the changes</li>
+  <pre>source ~/.bash_profile</pre>
+  <li>Test that it worked</li>
+  <pre>subl .</pre>
+</ol>
+<p><strong>Reason</strong></p>
+<p>We will be constantly using Sublime editor for all of our code. This is a handy alias that easily opens up sublime for us.</p>
+
+<h4 class = "page-header">Install rbenv</h2>
+<p><strong>Instruction</strong></p>
+<ol>
+  <li>Download rbenv via brew</li>
+  <pre>brew install rbenv</pre>
+  <pre>rbenv init</pre>
+  <li>Install the latest version of ruby</li>
+  <pre>rbenv install 2.2.3</pre>
+</ol>
+<p><strong>Reason</strong></p>
+<p>Have stable vruby version to develop on.</p>
