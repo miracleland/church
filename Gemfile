@@ -9,6 +9,7 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-contrib'
 gem 'sinatra-flash'
+gem 'slim'
 
 group :test, :development do
   gem 'dotenv'

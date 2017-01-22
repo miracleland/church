@@ -78,7 +78,11 @@ GEM
       tilt (>= 1.3, < 3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    slim (3.0.7)
+      temple (~> 0.7.6)
+      tilt (>= 1.3.3, < 2.1)
     slop (3.6.0)
+    temple (0.7.7)
     thread_safe (0.3.5)
     tilt (2.0.4)
     tzinfo (1.2.2)
@@ -98,6 +102,10 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   sinatra-flash
+  slim
+
+RUBY VERSION
+   ruby 2.2.4p230
 
 BUNDLED WITH
-   1.11.2
+   1.13.6

@@ -1,0 +1,129 @@
+h1.page-header Setup
+p
+  | Before we do any coding we need to setup our environment. This section will help you configure all the tools you need to get through this course. This course requires a mac so that we can all be on the same page. Sorry windows users!
+p Be sure to follow these steps sequentially. If you get stuck please let me know.
+
+h4.page-header Learning Goals
+p
+  | Persevere through difficulty. Many people quit learning how to code before they actually do any coding because they cannot persevere through setting up their environment. Remember nothing in life worth doing is easy.
+
+h4.page-header Update OS
+p
+  strong Instruction
+ol
+  li Determine your OS version.
+  li If do not have Sierra, go to the Apple Store and update your OS X version to the latest.
+  li Note: you will need an apple id to download the latest OS version.
+p
+  strong Reason
+p Many of the tools we will utilize require the latest OS version.
+
+h4.page-header Install Slack
+p
+  strong Instruction
+ol
+  li
+    a(href="https://slack.com/downloads") Download
+  li
+    | Email me at
+    a(href="mailto:lchangdev@gmail.com?subject=slack%20invite%20request") lchangdev@gmail.com
+    | to get an invitation to our slack group.
+
+p
+  strong Reason
+p
+  | Slack is a great communication tool that tech professionals use all the time. It helps us easily share files and snippets of code. It is also a great medium to ask questions and help your peers!
+
+h4.page-header Install Chrome
+p
+  strong Instruction
+ol
+  li
+    a(href="https://www.google.com/intl/en/chrome/browser/desktop/index.html") Download
+p
+  strong Reason
+p
+  | This will be our primary development browser. Chrome's developer tools are tremendously powerful and helpful for web development. Which we will use extensively once we begin our course on JavaScript.
+
+h4.page-header Install Sublime
+p
+  strong Instruction
+ol
+  li
+    a(href="https://www.sublimetext.com/3") Download
+  li Be sure to download the version for OS X.
+p
+  strong Reason
+p This is the tool we will be using to write our code.
+
+h4.page-header Install Apple Xcode Command Line Tools
+p
+  strong Instruction
+ol
+  li Install the command line tools by entering the following command into your terminal.
+  pre xcode-select --install
+  li Restart your computer.
+  li Verify that the installation was successful.
+  pre xcode-select -p
+  li Typing the above should return the following:
+  pre
+    | /Library/Developer/CommandLineTools
+p
+  strong Reason
+p
+  | Installation of many common Unix-based tools requires a GCC compiler. The Xcode Command Line Tools include a GCC compiler.
+
+h4.page-header Install Homebrew
+p
+  strong Instruction
+ol
+  li To install run this command in terminal.
+  pre ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)"
+  li Verify installation was successful.
+  pre brew doctor
+  li You should see:
+  pre Your system is ready to brew
+p
+  strong Reason
+p Homebrew is a package management system that simplifies the installation of software.
+
+h4.page-header Install iTerm2
+p
+  strong Instruction
+ol
+  li
+    a(href="http://iterm2.com/downloads.html") Download
+p
+  strong Reason
+p This will be our default terminal. It has some awesome features that the standard terminal does not.
+
+h4.page-header Set Sublime as default editor
+p
+  strong Instruction
+ol
+  li Be sure that sublime is in your Applications folder.
+  li Open bash profile.
+  pre open ~/.bash_profile
+  li Place alias within bash profile.
+  pre alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+  li Reload bash profile to save the changes.
+  pre source ~/.bash_profile
+  li Test that it worked.
+  pre subl .
+p
+  strong Reason
+p
+  | We will be constantly using Sublime editor for all of our code. This is a handy alias that easily opens up sublime for us.
+
+h4.page-header Install rbenv
+p
+  strong Instruction
+ol
+  li Download rbenv via brew
+  pre brew install rbenv
+  pre rbenv init
+  li Install the latest version of ruby
+  pre rbenv install 2.2.3
+p
+  strong Reason
+p Have stable ruby version to develop on.

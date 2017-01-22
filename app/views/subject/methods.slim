@@ -1,0 +1,88 @@
+h1.page-header Methods
+p
+  | Now that we know numbers, letters and variables lets mix them up. Methods are little collections of reusable code. They allow us to repeat actions or sets of actions, and make writing flexible and modular programs a whole lot easier. In the <strong>letters</strong> chapter we introduced the concept of&nbsp;
+  strong
+    | nouns&nbsp;
+  | and&nbsp;
+  strong
+    | verbs&nbsp;
+  | . This portion we are going to focus on&nbsp;
+  strong
+    | verbs&nbsp;
+  | . Methods are verbs of most programming languages. They put our nouns in motion. They help us perform actions.
+
+h4.page-header to_s
+p
+  | The first method we are going to look at is .to_s. I highly encourage you to begin to look at the&nbsp;
+  a(href="http://ruby-doc.org/core-2.2.0") Ruby documentation
+  | &nbsp;. I refer to these docs constantly.
+pre 1.to_s
+p
+  | Output is&nbsp;
+  strong "1"
+
+h4.page-header to_i
+pre "1".to_i
+p
+  | Output is&nbsp;
+  strong 1
+
+h4.page-header gets
+p
+  | Just like&nbsp;
+  strong
+    | puts&nbsp;
+  | handles outputs&nbsp;
+  strong
+    | gets&nbsp;
+  | handles inputs.
+pre
+  | puts "Hello what is your name"
+  br
+  | name = gets
+  br
+  | puts "Hello " + name + " it is nice to meet you!"
+
+p
+  | Output is:&nbsp;
+  strong Hello Lawrence /n it is nice to meet you!
+p
+  | That funny looking slash with n is a line break. Why the line break? We need to use another method called&nbsp;
+  strong chomp
+  | .
+pre
+  | puts "Hello what is your name"
+  br
+  | name = gets.chomp
+  br
+  | puts "Hello " + name + " it is nice to meet you!"
+
+p
+  | Output is:
+  strong Hello Lawrence it is nice to meet you!
+
+h4.page-header Return
+p
+  | All of the methods that we invoked above&nbsp;
+  strong
+    | returned&nbsp;
+  | an output. When a method&nbsp;
+  strong
+    | returns&nbsp;
+  | something, that means it provides us with the result of the verb. It's the result of the action. You should always seek to find out what any given method returns.
+p
+  | In Ruby nearly every method you call has a return value of some kind. In&nbsp;
+  strong
+    | IRB&nbsp;
+  | this is denoted by the&nbsp;
+  strong
+    | =>&nbsp;
+  | symbol that appears after you hit&nbsp;
+  <i>enter</i>
+  | .
+
+h4.page-header Practice
+p
+  | Write a program which asks for a persons first name, then middle, then last. Finally, it should greet the person using their full name.
+p
+  | Write a program which asks for a persons favorite number. Have your program add one to the number.

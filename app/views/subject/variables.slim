@@ -1,0 +1,116 @@
+h1.page-header Variables
+p
+  | Up until this point when we use&nbsp;
+  strong puts / print
+  | &nbsp;that string or number is lost. That makes it very difficult to write more complex programs. That is where variables come in.
+p
+  | The process of storing a string or number inside a variable is called an&nbsp;
+  strong assignment
+  | . The name storing the value is called the&nbsp;
+  strong variable
+  | . Variables are a fundamental underpinning of programming and managing data and your program.
+p
+  | If your ruby program represents a human body, variables are that body's lifeblood. Where blood transports the essentials that your body requires to operate, a variable carries the data that your program expects to run. Not only are they useful, but they are necessary to developing more complex programs.
+p
+  | In most languages variables are declared and assigned. You do not have to declare variables in Ruby explicitly but you are required to assign them.
+pre
+  | name = 'Lawrence'
+  br
+  | puts 'hello ' + name
+  br
+  | => 'hello Lawrence'
+
+h4.page-header Ruby variable convention
+p
+  | In Ruby, variable names must follow a certain format. This is so that the Ruby interpreter knows it has been handed a variable when it sees one as opposed to something else.
+p
+  | They must be composed of lowercase letters and may contain underscores and numbers provided that the first character is a lower case letter.
+p The following are syntactically correct Ruby variables:
+pre
+  | age = 10
+  br
+  | time = 60.0
+  br
+  | favorite_color = 'blue'
+  br
+  | least_favorite_color = 'hot pink mixed with brown'
+  br
+p The following are syntactically incorrect Ruby variables:
+pre
+  | pi to 5 decimals = 3.14159
+  br
+  | &amp;greeting = "hello"
+  br
+  | 99_bottles = 99
+  br
+  | PI = 3.14
+
+h4.page-header Meaningful variable names
+p
+  | When coding we want to make our code readable because we are not the only ones reading the code. In the real world many developers will work on the same piece of code. So as we move forward don't think of Ruby code as medium for the Ruby interpreter only but also a way for us to communicate with fellow developers. Your code should be clear and crisp, always keeping in mind that someone else is going to read your code and therefore must be able to understand it. Consider the following:
+pre
+  | b = 60
+  br
+  | c = 60
+  br
+  | d = 24
+  br
+  | e = 365
+  br
+  | f = b * c * d * e
+p
+  | As a developer jumping into the program I have no idea what is going on above. Rather if I just change the variable names, the program will be much more meaningful.
+pre
+  | seconds_in_a_minute = 60
+  br
+  | minutes_in_an_hour = 60
+  br
+  | hours_in_a_day = 24
+  br
+  | days_in_a_year = 365
+  br
+  | seconds_in_a_year = seconds_in_a_minute * minutes_in_an_hour * hours_in_a_day * days_in_a_year
+
+h4.page-header Converting variable types
+p
+  | Lets go ahead and open up a&nbsp;
+  strong IRB
+  | &nbsp;session and try this:
+pre 2 + "2"
+p
+  | We will get a&nbsp;
+  strong TypeError
+  | . Quite often we will have to convert a variable's data type to another in order to interact with it. In Computer Science we call this&nbsp;
+  strong type coercion or casting
+  | .
+pre
+  | age = "25"
+  br
+  | age = age.to_i
+p
+  | The above converts&nbsp;
+  strong age
+  | &nbsp;which is assigned to the string&nbsp;
+  strong "25"
+  | &nbsp;to an integer. We will go more in depth into methods in the methods chapter.
+
+h4.page-header String Interpolation
+p
+  | If you recall the String Arthimetic portion of the String chapter it was a bit clunky. To refresh your memory this is what it looked like:
+pre
+  | age = 29
+  br
+  | name = "lawrence"
+  br
+  | puts name + "is a human that has survived for" + age.to_s + "years."
+p Enter in string interpolation!
+p We are going to allow the Ruby interpreter to take care of all of this for us.
+pre
+  | puts "\#{name} is a human that has survied for \#{age} years."
+p So clean and pretty!
+
+h4.page-header Practice Problem
+p
+  | We've learned a lot so lets do a practice problem to test our new skills with the&nbsp;
+  a(href="/week/1/practice/galapagos") galapagos problem
+  | .

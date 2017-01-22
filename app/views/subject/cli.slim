@@ -1,0 +1,142 @@
+h1.page-header CLI
+p
+  | Back in the day, computers didn't have Graphical User Interfaces (GUIs). It used to be that you would flip a switch on the back of the computer, and, after a few minutes of beeping and whirring, you would be presented with a command prompt. Fittingly, this is also where we will begin our journey. Lets go ahead and open up iTerm2. Moving forward when I refer to the terminal I am referring to iTerm2.
+
+h4.page-header Basic Structure
+p
+  | If you take a look you will see that your computer name shows followed by a&nbsp;
+  code ~
+  | &nbsp;which represents you are in the home directory. The&nbsp;
+  code $
+  | &nbsp;represents the command prompt.
+
+h4.page-header Say Something
+p
+  | Now lets say something:
+  pre echo "hello world"
+
+h4.page-header What's My Username?
+p
+  | Now lets figure out our username:
+  pre whoami
+
+h4.page-header Paths
+p
+  | Everything in the file system is nested underneath the root folder,&nbsp;
+  code "/"
+  | . The absolute path of an item in the file system is it's location relative to the root folder. To get to the root you can type:
+  pre cd ~
+p The relative path of file or folder is its location from the current working directory.
+p The absolute path is from the root folder.
+p
+  | To get our absolute path of our working directory:
+  pre pwd
+
+h4.page-header Viewing Files
+p
+  | When working on the CLI we work primarily with files and directories. Lets view a file:
+  pre ls
+
+h4.page-header Common Commands
+table.table.table-responsive
+  thead
+    tr
+      td command
+      td example
+      td description
+  tbody
+    tr
+      td
+        pre ls
+      td
+        pre ls
+      td List directory contents.
+    tr
+      td
+        pre mv
+      td
+        pre mv original_filename new_filename
+      td
+        | Moves one or more files or directories from one place to another. Since it can "move" files from one filename to another, it is also used to rename files.
+    tr
+      td
+        pre mkdir
+      td
+        pre mkdir new_directory
+      td  Creates a new directory in the current directory.
+    tr
+      td
+        pre cd
+      td
+        pre cd directory_name
+      td Changes the user's current directory location.
+    tr
+      td
+        pre pwd
+      td
+        pre pwd
+      td Displays the absolute pathname of current working directory.
+    tr
+      td
+        pre rm
+      td
+        pre rm filename
+      td Removes file. Recommend to use 'rm -i' because it asks the user to confirm.
+    tr
+      td
+        pre cat
+      td
+        pre cat filename
+      td Display the text in a file.
+    tr
+      td
+        pre diff
+      td
+        pre diff file_one file_two
+      td Display the difference between two files.
+
+h4.page-header Running Ruby
+p There are two ways to execute code with ruby:
+ol
+  li Interactive Ruby (IRB)
+  li
+    | Saving
+    code .rb
+    | files and sending them through the interpreter.
+
+h5.page-header IRB
+p
+  | IRB is a way for us to send small snippets of Ruby code to the interpreter. We can use it to explore the basics of Ruby because it will show the results of the Ruby statements you send to it.</p>
+p To use IRB simply type:
+pre irb
+p inside of your terminal and it will start a new IRB session.
+p To leave IRB type:
+pre exit
+p or
+pre ctrl + c
+p
+  | IRB is the right tool to use when you want to run basic ruby metods such as testing how a method works.
+
+h5.page-header Debugger: PRY
+p
+  | Debuggers are a common name for software that allows us to inspect live-running code. We can use debuggers to break open our code at a particular point while it is running, allowing us to investigate the live state. It can be an incredibly useful while coming up against tough problems.
+p
+  | One popular and powerful ruby debugger is Pry, which can be installed by running:
+  pre gem install pry
+p Once installed, we can use pry on the command line much like irb.
+pre
+  | pry
+  br
+  | 2 + 2
+  br
+  | => 4
+
+h5.page-header Saving .rb files and sending them through the interpreter
+p
+  | This will be the primary way we run ruby code. Lets go ahead and jump to the next section to see how this works.
+
+h4.page-header Practice Problem
+p
+  | We've learned a lot so lets do a practice problem to test our new skills with the&nbsp;
+  a(href="/week/1/practice/noobie") noobie problem
+  | .

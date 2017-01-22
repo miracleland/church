@@ -1,5 +1,5 @@
 get '/' do
   current_path_info(request)
 
-  erb :index
+  slim :'index/cirriculum'
 end

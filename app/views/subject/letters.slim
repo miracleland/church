@@ -1,0 +1,80 @@
+h1.page-header Letters
+p
+  | When you write something that is in human language it is called text. When you write something that is in computer language that is called code.
+
+h4.page-header Strings
+p
+  | In programming, the term&nbsp;
+  strong
+    | string&nbsp;
+  | is just a fancy term for a sequence of letters.
+p In ruby, to create a string simply wrap the text in single or double quotes. However as a standard we will be using single quotes.
+pre puts "hello world"
+pre puts 'I\'m a coding machine!'
+p
+  | Now try opening up a new&nbsp;
+  strong
+    | irb&nbsp;
+  | session and lets dive in deeper.
+pre
+  | ~ irb
+  br
+  | irb(main):001:0> 'hello'.class
+  br
+  | => String
+p
+  | When we ask&nbsp;
+  strong
+    | 'hello'&nbsp;
+  | what&nbsp;
+  strong
+    | .class&nbsp;
+  | it is we are essentially asking 'Hey what&nbsp;
+  i
+    | kind&nbsp;
+  | of thing are you anyways?'.
+p
+  | I want you to start thinking in terms of&nbsp;
+  strong
+    | nouns&nbsp;
+  | and&nbsp;
+  strong
+    | verbs
+  | . In the case above&nbsp;
+  strong
+    | 'hello'&nbsp;
+  | is the&nbsp;
+  strong
+    | noun&nbsp;
+  | and&nbsp;
+  strong
+    | .class&nbsp;
+  | is the verb.
+p
+  | This is a very important concept and will help you out in more complex situations in the future.&nbsp;
+  strong
+    | .class&nbsp;
+  | is a specific method for the&nbsp;
+  strong
+    | String&nbsp;
+  | class however we will go more in depth into methods in another chapter.
+
+h4.page-header String Arithmetic
+pre
+  | puts 'hello ' + 'there'
+  br
+  | => 'hello there'
+pre
+  | puts 'yo ' * 4
+  br
+  | => yo yo yo yo'
+pre
+  | puts '12' + '12'
+  br
+  | => 1212'
+
+h4.page-header Practice Problem
+p
+  | We've learned a lot so lets do a practice problem to test our new skills with the&nbsp;
+  a(href="/week/1/practice/alphabet") alphabet problem
+  | .

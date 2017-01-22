@@ -1,3 +1,3 @@
 get '/week/:id/:subject/:practice' do
-  erb :"practice/#{params[:practice]}"
+  slim :"practice/#{params[:practice]}"
 end

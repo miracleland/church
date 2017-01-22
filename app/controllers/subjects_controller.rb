@@ -1,3 +1,3 @@
 get '/week/:id/:subject' do
-  erb :"subject/#{params[:subject]}"
+  slim :"subject/#{params[:subject]}"
 end
